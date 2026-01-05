@@ -2,7 +2,7 @@ require('dotenv').config();
 const TelegramBot = require('node-telegram-bot-api');
 
 // توکن بات تلگرام خود را در فایل .env قرار داده‌اید
-const token = '7374433507:AAFB_DLMQOdZihX3cZzwPb0Q6lOFpThn4LU';
+const token = '8523483933:AAGr_CQFKPhzHlxHgMS8bU4tTpvjZksCdG8';
 const bot = new TelegramBot(token, { polling: true });
 
 // واکنش به دستور /start
