@@ -8,23 +8,30 @@ const bot = new TelegramBot(token, { polling: true });
 // واکنش به دستور /start
 bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
-  bot.sendMessage(chatId, "به صرافی بیتیوم خوش آمدید!خرید ارزهای دیجیتال پرطرفدار با احراز هویت آسان و سریع ⚡️ کیف پول امن و سامانه خرید و فروش ارزهای همستر, نات کوین, تون کوین,‌بیت کوین، تتر، شیبا و 150+ رمزارز در صرافی بیتیوم..", {
-    reply_markup: {
-      inline_keyboard: [
-        [
-          {
-            text: "خرید و فروش",
-            web_app: { url: `https://bitiom.ir?chatId=${chatId}` } // آدرس وب اپلیکیشن خود را وارد کنید
-          }
-        ]
+ bot.sendMessage(chatId, 
+`Welcome to TRXZAP ⚡️
+
+Buy and rent TRON Energy & Bandwidth instantly with the best rates.
+Fast delivery, secure transactions, and full automation.
+
+No staking, no freezing TRX — just pay and receive energy in seconds.`,
+{
+  reply_markup: {
+    inline_keyboard: [
+      [
+        {
+          text: "Buy Energy",
+          web_app: { url: `https://trxzap.com?chatId=${chatId}` }
+        }
       ]
-    }
-  });
+    ]
+  }
+});
 });
 
 // دریافت داده از وب اپلیکیشن (اختیاری)
 bot.on('web_app_data', (msg) => {
   const chatId = msg.chat.id;
   const data = msg.web_app_data.data;
-  bot.sendMessage(chatId, `داده دریافت شد: ${data}`);
+  bot.sendMessage(chatId, `recived: ${data}`);
 });
