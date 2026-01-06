@@ -21,7 +21,7 @@ No staking, no freezing TRX — just pay and receive energy in seconds.`,
       [
         {
           text: "Buy Energy",
-          web_app: { url: `https://trxzap.com?chatId=${chatId}` }
+          web_app: { url: `https://trxzap.com` }
         }
       ]
     ]
